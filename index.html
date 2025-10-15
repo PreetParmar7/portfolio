@@ -18,7 +18,6 @@
     nav { background: #fff; padding: 10px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
     nav .container { display: flex; justify-content: space-between; align-items: center; }
     nav ul { list-style: none; display: flex; gap: 20px; }
-    nav ul li { }
     nav ul li a { font-weight: 600; }
 
     /* Hero / Home */
@@ -37,14 +36,17 @@
     #about .content .photo { flex: 1 1 300px; text-align: center; }
     #about .content .photo img { border-radius: 50%; width: 200px; height: 200px; object-fit: cover; }
 
+    /* Education & Experience */
+    #education, #experience { background: #fff; padding: 40px 0; }
+    .edu-item, .exp-item { margin-bottom: 12px; }
+    .edu-item strong, .exp-item strong { font-weight: 600; }
+
     /* Projects section */
     #projects { padding: 40px 0; }
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .project-card { background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
-    .project-card img { width: 100%; height: 150px; object-fit: cover; }
-    .project-card .info { padding: 16px; }
-    .project-card .info h3 { margin-bottom: 10px; }
-    .project-card .info p { color: #555; font-size: 0.95rem; }
+    .project-card { background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; padding:16px; }
+    .project-card h3 { margin-bottom: 10px; }
+    .project-card p { color: #555; font-size: 0.95rem; }
 
     /* Skills section */
     #skills { background: #fff; padding: 40px 0; }
@@ -54,8 +56,6 @@
     /* Contact section */
     #contact { padding: 40px 0; background: #fff; }
     #contact .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    #contact .contact-grid .info { }
-    #contact .contact-grid .form { }
     #contact .contact-grid .info p { margin-bottom: 10px; }
 
     /* Footer */
@@ -78,6 +78,8 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -104,7 +106,39 @@
           <p>I have experience working with React, MySQL, PHP, Python, HTML & CSS. I enjoy collaborating in teams and constantly learning new tech.</p>
         </div>
         <div class="photo">
+          <!-- Add your profile photo here -->
+          <img src="your-photo.jpg" alt="Preet Parmar">
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-item">
+        <strong>SAL Institute of Diploma Studies, Ahmedabad, India</strong><br>
+        Diploma in Computer Engineering | October 2021 – May 2024<br>
+        CGPA: 9.44
+      </div>
+      <div class="edu-item">
+        <strong>Pandit Deendayal Energy University, Gandhinagar, India</strong><br>
+        Bachelor of Technology in Computer Engineering (CSE) | July 2024 – 2027<br>
+        SPI: 8.23 (Till 3rd Semester)
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience / Internship -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Work Experience / Internships</h2>
+      <div class="exp-item">
+        <strong>Front-End Development Intern – ReactJS</strong><br>
+        - Developed responsive web interfaces using ReactJS.<br>
+        - Implemented interactive UI components and state management.<br>
+        - Collaborated with team members to improve user experience and optimize performance.
       </div>
     </div>
   </section>
@@ -114,33 +148,22 @@
     <div class="container">
       <h2 class="section-title">Projects</h2>
       <div class="projects-grid">
-        <!-- Project 1 -->
         <div class="project-card">
-          <div class="info">
-            <h3>Cricket Auction Management</h3>
-            <p>A full-stack app built with React, PHP, MySQL. It handles auction flow, bidder tracking, and includes a simple AI module to predict bidding behaviour.</p>
-          </div>
-        </div>
-        <!-- Project 2 -->
-        <div class="project-card">
-          <div class="info">
-            <h3>Personal Portfolio Website</h3>
-            <p>A responsive portfolio website (this site) built using HTML, CSS, and a bit of JS. Designed to showcase my skills, projects, and contact info.</p>
-          </div>
+          <h3>Cricket Auction Management</h3>
+          <p>A full-stack app built with React, PHP, MySQL. It handles auction flow, bidder tracking, and includes a simple AI module to predict bidding behaviour.</p>
         </div>
         <div class="project-card">
-          <div class="info">
-            <h3>Uber Analytics using Visualization Tools</h3>
-            <p>This project analyzes Uber ride data to uncover patterns, trends, and insights using data visualization techniques. By leveraging tools like Tableau, Power BI,it explores metrics such as ride frequency, peak hours, popular pickup/drop-off locations, and fare distribution. </p>
-          </div>
+          <h3>Personal Portfolio Website</h3>
+          <p>A responsive portfolio website (this site) built using HTML, CSS, and a bit of JS. Designed to showcase my skills, projects, and contact info.</p>
         </div>
         <div class="project-card">
-          <div class="info">
-            <h3>Uber/Ride-sharing Analytics</h3>
-            <p>Analyzed Uber ride-sharing data to uncover patterns, trends, and insights using SQL and visualization tools for data-driven decision making.</p>
-          </div>
+          <h3>Uber Analytics using Visualization Tools</h3>
+          <p>This project analyzes Uber ride data to uncover patterns, trends, and insights using visualization techniques. Metrics include ride frequency, peak hours, pickup/drop-off locations, and fare distribution.</p>
         </div>
-        <!-- Add more projects similarly -->
+        <div class="project-card">
+          <h3>Uber/Ride-sharing Analytics</h3>
+          <p>Analyzed Uber ride-sharing data to uncover patterns, trends, and insights using SQL and visualization tools for data-driven decision making.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -169,10 +192,9 @@
         <div class="info">
           <p><strong>Email:</strong> 23bcp506d@sot.pdpu.ac.in</p>
           <p><strong>Phone:</strong> +91 1234567890</p>
-          <p><strong>Location:</strong> Ahmedabad,Gujarat</p>
+          <p><strong>Location:</strong> Ahmedabad, Gujarat</p>
         </div>
         <div class="form">
-          <!-- Placeholder for a contact form (optional) -->
           <p>If you'd like to collaborate or have any questions, feel free to reach out via email or phone above.</p>
         </div>
       </div>
@@ -181,7 +203,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>2025 Preet Parmar. All Rights Reserved.</p>
+    <p>© 2025 Preet Parmar. All Rights Reserved.</p>
   </footer>
 
 </body>
